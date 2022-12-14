@@ -61,6 +61,11 @@ export default {
   },
 
   methods: {
+    next() {
+      this.image++;
+      this.predictions = [];
+      setTimeout(this.predict, 500);
+    },
     async predict() {
       // execute inference
       let prediction = await this.model.executeAsync(this.$refs.img);
@@ -69,12 +74,7 @@ export default {
       this.predictions = label.map((p, i) => {
         return { index: i, label: this.labels[i], probability: p * 100 };
       });
-    },
-    next() {
-      this.image++;
-      this.predictions = [];
-      setTimeout(this.predict, 500);
-    },
+    }
   },
 
 }
