@@ -1,4 +1,6 @@
-/* eslint-disable */
+/**
+ * eslint-disable no-console
+ */
 <template>
   <div id="app">
     <DetectImage msg="What do you see?" />

@@ -1,4 +1,6 @@
-/* eslint-disable no-console */
+/**
+ * eslint-disable no-console
+ */
 <template>
   <div>
     <h1>{{ msg }}</h1>
